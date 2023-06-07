@@ -9,16 +9,6 @@ import routes from 'utils/routes';
 import Alert from 'modals/Alert';
 import './styles/main.scss';
 import React from 'react';
-import Register from './components/Register/RegisterUser';
-import Login from './modals/Login/Login';
-import EditUser from './modals/EditUser/EditUser';
-import Appointment from './components/Appointment';
-import MyAppointments from './components/MyAppointments';
-import AddOperationsModal from './modals/AppointmentDoctorModal';
-import DoctorsTeam from './components/DoctorsTeam';
-import OperationTable from './components/Operations/OperationsTable';
-import ViewAppointmentModal from './modals/ViewAppointmentModal';
-import Home from './components/Home/Home';
 
 const history = createBrowserHistory();
 const initialState = {};
@@ -34,10 +24,6 @@ root.render(
                 </Routes >
                 <Alert />
                 <ConfirmationModal />
-                <Login/>
-                <EditUser/>
-                <AddOperationsModal/>
-                <ViewAppointmentModal/>
         </BrowserRouter>
     </Provider>,
 );

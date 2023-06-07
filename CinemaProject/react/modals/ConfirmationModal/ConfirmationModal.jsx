@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleConfirmationModal } from 'actions/modal';
 import { Button, Modal } from 'react-bootstrap';
 import React from 'react';
 
