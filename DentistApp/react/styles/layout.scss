@@ -1,0 +1,163 @@
+/* Using SCSS functions
+    darken( $base-color, 10% )
+    lighten( $base-color, 10% )
+    saturate( $base-color, 20% )
+    desaturate( $base-color, 20% )
+    rgba( $base-color, .7 )
+    adjust-hue( $base-color, 20% )
+    tint( $base-color, 10% )
+    shade( $base-color, 10% )
+*/
+
+$primary: rgb(70, 221, 196);
+$primary-hover: desaturate($primary, 20%);
+$primary-pressed: darken($primary, 10%);
+$primary-disabled: desaturate($primary, 40%);
+$primary-pale: lighten(saturate($primary, 5.72), 35.69);
+$background: #f3f3f3;
+
+:root {
+    --blue: #217ce2;
+    --primary: #217ce2;
+    --primary-hover: #4d96e7;
+    --primary-pressed: #1e72d0;
+    --primary-disabled: #90bdf0;
+    --secondary: #1b1464;
+    --danger: #df2c3e;
+    --success: #00b37e;
+    --warning: #fcc400;
+    --info: #4d96e7;
+    --gray-dark: #6a6a6a;
+    --gray: #999999;
+    --gray-light: #c0c0c0;
+    --gray-pale: #e8e8e8;
+    --gray-snow: #f2e4bb;
+}
+
+html {
+    background-color: $background;
+
+    body {
+        background-color: inherit;
+        color: var(--dark);
+        outline: none;
+    }
+}
+
+.component {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.departament-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.04), 0 0 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ffffff9c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1031;
+
+    .spinner-border {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.btn {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover {
+        background-color: $primary-hover;
+        border-color: $primary-hover;
+    }
+    &:not(:disabled):not(:disabled):active {
+        background-color: $primary;
+        border-color: $primary;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
+        }
+    }
+}
+.btn-primary.focus,
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
+}
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: $primary;
+    background-color: transparent;
+}
+
+.btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+
+    &:hover {
+        background-color: $primary;
+        border-color: $primary;
+    }
+    &:not(:disabled):not(:disabled):active {
+        background-color: $primary;
+        border-color: $primary;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
+        }
+    }
+}
+.btn-outline-primary.focus,
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
+}
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
+    color: $primary;
+    background-color: transparent;
+}
+
+.show > .btn-outline-primary.dropdown-toggle {
+    background-color: $primary;
+    border-color: $primary;
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
+    }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: $primary;
+}
+
+.custom-select:focus {
+    border-color: $primary-disabled;
+    box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+}
+
+.form-control:focus {
+    border-color: $primary-disabled;
+    box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+}

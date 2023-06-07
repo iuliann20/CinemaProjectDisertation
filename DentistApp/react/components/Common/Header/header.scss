@@ -1,0 +1,64 @@
+.header.navbar {
+    background-color: white;
+    padding: 0px 48px;
+    border-bottom: 1px solid var(--gray-pale);
+
+    .navbar-brand {
+        margin-right: 32px;
+        color: inherit;
+    }
+
+    .navbar-collapse.show {
+        text-align: center;
+
+        .nav-link {
+            margin-right: 0;
+            margin-bottom: 4px;
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: inherit;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: bold;
+            padding: 8px 16px;
+            margin-right: 32px;
+            border-radius: 9999px;
+
+            &:hover {
+                background-color: $primary-hover;
+                color: white;
+            }
+
+            &.active {
+                background-color: $primary;
+                color: white;
+            }
+        }
+    }
+
+    .user-info {
+        display: inline-block;
+
+        p {
+            font-weight: 500;
+        }
+    }
+
+    .navbar-toggler {
+        outline: none;
+    }
+
+    .download-icon {
+        color: #0606f8c5;
+        display: flex;
+        justify-content: center;
+    }
+
+    .download-icon:hover {
+        text-decoration: none;
+        color: rgb(137, 137, 250)
+    }
+}

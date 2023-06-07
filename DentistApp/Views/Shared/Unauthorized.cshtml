@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DentistApp</title>
+    <link rel="stylesheet" href="~/lib/material-icons/material-icons.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/dist/bundle.css" />
+    <style>
+        .unauthorized {
+            margin-top: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light fixed-top shadow-sm">
+        <a href="/" class="navbar-brand">DentistApp</a>
+        <div class="user-info">
+            <p class="mb-0">@User.Identity.Name</p>
+        </div>
+    </nav>
+    <div class="container unauthorized">
+        <h4 class="text-danger display-4 my-4">Oops! Nu esti autorizat pentru a accesa aceasta pagina.</h4>
+        <pre class="text-left font-weight-bold">@Model</pre>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

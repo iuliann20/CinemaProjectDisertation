@@ -1,0 +1,21 @@
+@import "./Alert/Alert.scss";
+
+.custom-select:disabled {
+    background-color: #e9ecef !important;
+    opacity: 1 !important;
+    color: #495057 !important;
+}
+
+.disabledRow {
+    pointer-events: none;
+}
+
+b {
+    &.placeholder{
+        color: #46ddc4
+    }
+}
+
+.b-mandatory {
+    color: #e00000;
+  }

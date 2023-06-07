@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat code coverage">
+        <Configuration>
+          <Format>opencover</Format>
+			<!-- [Assembly-Filter]Type-Filter -->
+			<Exclude>[DentistApp.DataAccessLayer]*</Exclude>
+          <!-- Absolute or relative file paths -->
+          <ExcludeByFile>**/Program.cs,**/Startup.cs,**/StartupTest.cs,**/*Configuration.cs</ExcludeByFile>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>
