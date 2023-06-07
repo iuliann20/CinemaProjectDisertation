@@ -13,13 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DentistApp.Common\CinemaProject.Common.csproj" />
-    <ProjectReference Include="..\DentistApp.Models\CinemaProject.Models.csproj" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\DentistApp.Common\CinemaProject.Common.csproj" />
   </ItemGroup>
 
 </Project>
